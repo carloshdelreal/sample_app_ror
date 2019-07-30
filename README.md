@@ -53,7 +53,7 @@ your@pc:~$ cd toy_app
 install gems
 
 ```Shell
-your@pc:~$ bundle install
+your@pc:~$ bundle install --without production
 ```
 
 migrate the database
@@ -61,8 +61,12 @@ migrate the database
 ```Shell
 your@pc:~$ rake db:migrate
 ```
+Finally, run the test suite to verify that everything is working correctly:
 
-run the server
+```
+$ rails test
+```
+If the test suite passes, you'll be ready to run the app in a local server:
 
 ```Shell
 your@pc:~$ rails server
@@ -70,6 +74,10 @@ your@pc:~$ rails server
 ```
 
 Then, go to [http://localhost:3000/](http://localhost:3000/)
+
+For more information, see the
+[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
+
 
 # License
 
